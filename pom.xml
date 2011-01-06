@@ -7,6 +7,14 @@
   <name>Euclid-Testutil</name>
   <description>Test utils</description>
 
+  <repositories>
+    <repository>
+      <id>ucc-repo</id>
+      <name>UCC Repository</name>
+      <url>https://maven.ch.cam.ac.uk/m2repo</url>
+    </repository>
+  </repositories>
+
   <parent>
     <groupId>wwmm</groupId>
     <artifactId>wwmm-parent</artifactId>
