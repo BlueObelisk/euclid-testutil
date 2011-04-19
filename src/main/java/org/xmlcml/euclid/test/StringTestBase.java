@@ -43,14 +43,17 @@ public class StringTestBase {
 	 * convenience method where test is a whitespace-separated set of tokens
 	 * 
 	 * @param message
-	 * @param a
+	 * @param expected
 	 *            expected array as space concatenated
-	 * @param b
+	 * @param actual
 	 *            actual array may not include nulls
 	 */
-	public static void assertEquals(String message, String a, String[] b) {
-		String[] aa = a.split(S_SPACE);
-		String s = testEquals(aa, b);
+	public static void assertEquals(String message, String expected, String[] actual) {
+		if(expected==null){
+			Assert.fail(message+"; "+"null expected String");
+		}
+		String[] aa = expected.split(S_SPACE);
+		String s = testEquals(aa, actual);
 		if (s != null) {
 			Assert.fail(message + "; " + s);
 		}
@@ -92,13 +95,13 @@ public class StringTestBase {
 	 * checks for non-null, then equality of length, then individual elements
 	 * 
 	 * @param message
-	 * @param a
+	 * @param expected
 	 *            expected array
-	 * @param b
+	 * @param actual
 	 *            actual array
 	 */
-	public static void assertNotEquals(String message, String[] a, String[] b) {
-		String s = testEquals(a, b);
+	public static void assertNotEquals(String message, String[] expected, String[] actual) {
+		String s = testEquals(expected, actual);
 		if (s == null) {
 			Assert.fail(message + "; arrays are equal");
 		}
