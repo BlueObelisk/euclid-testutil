@@ -1,6 +1,5 @@
 package org.xmlcml.euclid.test;
 
-import org.junit.Assert;
 
 /**
  * 
