@@ -24,16 +24,16 @@ public class DoubleTestBase {
 	 * checks for non-null, then equality of length, then individual elements
 	 * 
 	 * @param message
-	 * @param a
+	 * @param expected
 	 *            expected array
-	 * @param b
+	 * @param actual
 	 *            actual array
 	 * @param eps
 	 *            tolerance for agreement
 	 */
-	public static void assertEquals(String message, double[] a, double[] b,
+	public static void assertEquals(String message, double[] expected, double[] actual,
 			double eps) {
-		String s = testEquals(a, b, eps);
+		String s = testEquals(expected, actual, eps);
 		if (s != null) {
 			Assert.fail(message + "; " + s);
 		}
