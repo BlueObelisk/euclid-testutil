@@ -61,7 +61,8 @@ public class DoubleTestBase {
 		return Math.abs(a - b) < epsilon;
 	}
 	
-    private static boolean isEqual(double[] a, double[] b, double epsilon) {
+    @SuppressWarnings("unused")
+	private static boolean isEqual(double[] a, double[] b, double epsilon) {
         if (a == null || b == null || a.length != b.length) {
             return false;
         }
