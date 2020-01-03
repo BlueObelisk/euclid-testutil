@@ -56,8 +56,13 @@
 				<artifactId>maven-license-plugin</artifactId>
 				<configuration>
 					<header>src/main/resources/header.txt</header>
+					<strictCheck>true</strictCheck>
 					<excludes>
 						<exclude>**/resources/**</exclude>
+						<exclude>README.md</exclude>
+						<exclude>LICENSE.txt</exclude>
+						<exclude>.gitignore</exclude>
+						<exclude>.travis.yml</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
