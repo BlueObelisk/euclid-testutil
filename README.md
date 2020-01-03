@@ -1,4 +1,5 @@
 # Euclid-Testutil
+[![Build Status](https://travis-ci.org/BlueObelisk/euclid-testutil.svg?branch=master)](https://travis-ci.org/BlueObelisk/euclid-testutil)
 
 Test utilities for the Euclid project.
 
